@@ -1,0 +1,191 @@
+Started GET "/" for 127.0.0.1 at 2017-06-01 19:45:55 -0400
+Processing by Rails::WelcomeController#index as HTML
+  Parameters: {"internal"=>true}
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/railties-5.0.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/railties-5.0.3/lib/rails/templates/rails/welcome/index.html.erb (31.3ms)
+Completed 200 OK in 730ms (Views: 377.1ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (15.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (15.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateStates (20170601235618)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE TABLE "states" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "abbreviation" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (15.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170601235618"]]
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateDepartments (20170601235940)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE TABLE "departments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "code" integer, "state_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.0ms)[0m  [1m[34mselect sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE  INDEX "index_departments_on_state_id" ON "departments" ("state_id")[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170601235940"]]
+  [1m[35m (15.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (15.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2017-06-02 00:05:04.562196"], ["updated_at", "2017-06-02 00:05:04.562196"]]
+  [1m[35m (15.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_departments_on_state_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_departments_on_state_id' AND type='index'
+[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "states" ("name", "abbreviation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Alabama"], ["abbreviation", "AL"], ["created_at", "2017-06-02 00:06:20.390563"], ["updated_at", "2017-06-02 00:06:20.390563"]]
+  [1m[35m (15.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "states" ("name", "abbreviation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Alaska"], ["abbreviation", "AK"], ["created_at", "2017-06-02 00:06:20.406187"], ["updated_at", "2017-06-02 00:06:20.406187"]]
+  [1m[35m (15.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (15.6ms)[0m  [1m[32mINSERT INTO "states" ("name", "abbreviation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Arizona"], ["abbreviation", "AZ"], ["created_at", "2017-06-02 00:06:20.421813"], ["updated_at", "2017-06-02 00:06:20.421813"]]
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (15.6ms)[0m  [1m[32mINSERT INTO "states" ("name", "abbreviation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Arkansas"], ["abbreviation", "AR"], ["created_at", "2017-06-02 00:06:20.437437"], ["updated_at", "2017-06-02 00:06:20.437437"]]
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "states" ("name", "abbreviation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "California"], ["abbreviation", "CA"], ["created_at", "2017-06-02 00:06:20.468689"], ["updated_at", "2017-06-02 00:06:20.468689"]]
+  [1m[35m (15.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "states" ("name", "abbreviation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Colorado"], ["abbreviation", "CO"], ["created_at", "2017-06-02 00:06:20.484315"], ["updated_at", "2017-06-02 00:06:20.484315"]]
+  [1m[35m (15.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "states" ("name", "abbreviation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Connecticut"], ["abbreviation", "CT"], ["created_at", "2017-06-02 00:06:20.499941"], ["updated_at", "2017-06-02 00:06:20.499941"]]
+  [1m[35m (15.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "states" ("name", "abbreviation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Delaware"], ["abbreviation", "DE"], ["created_at", "2017-06-02 00:06:20.515566"], ["updated_at", "2017-06-02 00:06:20.515566"]]
+  [1m[35m (15.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "states" ("name", "abbreviation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "District of Columbia"], ["abbreviation", "DC"], ["created_at", "2017-06-02 00:06:20.531194"], ["updated_at", "2017-06-02 00:06:20.531194"]]
+  [1m[35m (15.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "states" ("name", "abbreviation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Florida"], ["abbreviation", "FL"], ["created_at", "2017-06-02 00:06:20.546818"], ["updated_at", "2017-06-02 00:06:20.546818"]]
+  [1m[35m (15.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (15.6ms)[0m  [1m[32mINSERT INTO "states" ("name", "abbreviation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Georgia"], ["abbreviation", "GA"], ["created_at", "2017-06-02 00:06:20.562444"], ["updated_at", "2017-06-02 00:06:20.562444"]]
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (15.6ms)[0m  [1m[32mINSERT INTO "states" ("name", "abbreviation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Hawaii"], ["abbreviation", "HI"], ["created_at", "2017-06-02 00:06:20.578070"], ["updated_at", "2017-06-02 00:06:20.578070"]]
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "states" ("name", "abbreviation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Idaho"], ["abbreviation", "ID"], ["created_at", "2017-06-02 00:06:20.593697"], ["updated_at", "2017-06-02 00:06:20.593697"]]
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "states" ("name", "abbreviation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Illinois"], ["abbreviation", "IL"], ["created_at", "2017-06-02 00:06:20.624947"], ["updated_at", "2017-06-02 00:06:20.624947"]]
+  [1m[35m (15.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "states" ("name", "abbreviation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Indiana"], ["abbreviation", "IN"], ["created_at", "2017-06-02 00:06:20.640574"], ["updated_at", "2017-06-02 00:06:20.640574"]]
+  [1m[35m (15.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "states" ("name", "abbreviation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Iowa"], ["abbreviation", "IA"], ["created_at", "2017-06-02 00:06:20.656198"], ["updated_at", "2017-06-02 00:06:20.656198"]]
+  [1m[35m (15.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (15.6ms)[0m  [1m[32mINSERT INTO "states" ("name", "abbreviation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Kansas"], ["abbreviation", "KS"], ["created_at", "2017-06-02 00:06:20.671824"], ["updated_at", "2017-06-02 00:06:20.671824"]]
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (15.6ms)[0m  [1m[32mINSERT INTO "states" ("name", "abbreviation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Kentucky"], ["abbreviation", "KY"], ["created_at", "2017-06-02 00:06:20.687450"], ["updated_at", "2017-06-02 00:06:20.687450"]]
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "states" ("name", "abbreviation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Louisiana"], ["abbreviation", "LA"], ["created_at", "2017-06-02 00:06:20.718703"], ["updated_at", "2017-06-02 00:06:20.718703"]]
+  [1m[35m (15.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "states" ("name", "abbreviation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Maine"], ["abbreviation", "ME"], ["created_at", "2017-06-02 00:06:20.734328"], ["updated_at", "2017-06-02 00:06:20.734328"]]
+  [1m[35m (15.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "states" ("name", "abbreviation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Maryland"], ["abbreviation", "MD"], ["created_at", "2017-06-02 00:06:20.749954"], ["updated_at", "2017-06-02 00:06:20.749954"]]
+  [1m[35m (15.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "states" ("name", "abbreviation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Massachusetts"], ["abbreviation", "MA"], ["created_at", "2017-06-02 00:06:20.765580"], ["updated_at", "2017-06-02 00:06:20.765580"]]
+  [1m[35m (15.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "states" ("name", "abbreviation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Michigan"], ["abbreviation", "MI"], ["created_at", "2017-06-02 00:06:20.781207"], ["updated_at", "2017-06-02 00:06:20.781207"]]
+  [1m[35m (24.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (5.0ms)[0m  [1m[32mINSERT INTO "states" ("name", "abbreviation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Minnesota"], ["abbreviation", "MN"], ["created_at", "2017-06-02 00:06:20.806606"], ["updated_at", "2017-06-02 00:06:20.806606"]]
+  [1m[35m (7.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "states" ("name", "abbreviation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Mississippi"], ["abbreviation", "MS"], ["created_at", "2017-06-02 00:06:20.820824"], ["updated_at", "2017-06-02 00:06:20.820824"]]
+  [1m[35m (15.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "states" ("name", "abbreviation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Missouri"], ["abbreviation", "MO"], ["created_at", "2017-06-02 00:06:20.836452"], ["updated_at", "2017-06-02 00:06:20.836452"]]
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (15.6ms)[0m  [1m[32mINSERT INTO "states" ("name", "abbreviation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Montana"], ["abbreviation", "MT"], ["created_at", "2017-06-02 00:06:20.852076"], ["updated_at", "2017-06-02 00:06:20.852076"]]
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (15.6ms)[0m  [1m[32mINSERT INTO "states" ("name", "abbreviation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Nebraska"], ["abbreviation", "NE"], ["created_at", "2017-06-02 00:06:20.867702"], ["updated_at", "2017-06-02 00:06:20.867702"]]
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "states" ("name", "abbreviation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Nevada"], ["abbreviation", "NV"], ["created_at", "2017-06-02 00:06:20.883329"], ["updated_at", "2017-06-02 00:06:20.883329"]]
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "states" ("name", "abbreviation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "New Hampshire"], ["abbreviation", "NH"], ["created_at", "2017-06-02 00:06:20.914580"], ["updated_at", "2017-06-02 00:06:20.914580"]]
+  [1m[35m (15.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "states" ("name", "abbreviation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "New Jersey"], ["abbreviation", "NJ"], ["created_at", "2017-06-02 00:06:20.930206"], ["updated_at", "2017-06-02 00:06:20.930206"]]
+  [1m[35m (15.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "states" ("name", "abbreviation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "New Mexico"], ["abbreviation", "NM"], ["created_at", "2017-06-02 00:06:20.945832"], ["updated_at", "2017-06-02 00:06:20.945832"]]
+  [1m[35m (15.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "states" ("name", "abbreviation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "New York"], ["abbreviation", "NY"], ["created_at", "2017-06-02 00:06:20.961460"], ["updated_at", "2017-06-02 00:06:20.961460"]]
+  [1m[35m (15.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "states" ("name", "abbreviation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "North Carolina"], ["abbreviation", "NC"], ["created_at", "2017-06-02 00:06:20.977084"], ["updated_at", "2017-06-02 00:06:20.977084"]]
+  [1m[35m (15.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (15.6ms)[0m  [1m[32mINSERT INTO "states" ("name", "abbreviation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "North Dakota"], ["abbreviation", "ND"], ["created_at", "2017-06-02 00:06:20.992711"], ["updated_at", "2017-06-02 00:06:20.992711"]]
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "states" ("name", "abbreviation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Ohio"], ["abbreviation", "OH"], ["created_at", "2017-06-02 00:06:21.023963"], ["updated_at", "2017-06-02 00:06:21.023963"]]
+  [1m[35m (15.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "states" ("name", "abbreviation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Oklahoma"], ["abbreviation", "OK"], ["created_at", "2017-06-02 00:06:21.039588"], ["updated_at", "2017-06-02 00:06:21.039588"]]
+  [1m[35m (15.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "states" ("name", "abbreviation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Oregon"], ["abbreviation", "OR"], ["created_at", "2017-06-02 00:06:21.055213"], ["updated_at", "2017-06-02 00:06:21.055213"]]
+  [1m[35m (15.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "states" ("name", "abbreviation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Pennsylvania"], ["abbreviation", "PA"], ["created_at", "2017-06-02 00:06:21.070840"], ["updated_at", "2017-06-02 00:06:21.070840"]]
+  [1m[35m (15.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "states" ("name", "abbreviation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Rhode Island"], ["abbreviation", "RI"], ["created_at", "2017-06-02 00:06:21.086463"], ["updated_at", "2017-06-02 00:06:21.086463"]]
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (15.6ms)[0m  [1m[32mINSERT INTO "states" ("name", "abbreviation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "South Carolina"], ["abbreviation", "SC"], ["created_at", "2017-06-02 00:06:21.102091"], ["updated_at", "2017-06-02 00:06:21.102091"]]
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (15.6ms)[0m  [1m[32mINSERT INTO "states" ("name", "abbreviation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "South Dakota"], ["abbreviation", "SD"], ["created_at", "2017-06-02 00:06:21.117715"], ["updated_at", "2017-06-02 00:06:21.117715"]]
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "states" ("name", "abbreviation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Tennessee"], ["abbreviation", "TN"], ["created_at", "2017-06-02 00:06:21.133342"], ["updated_at", "2017-06-02 00:06:21.133342"]]
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "states" ("name", "abbreviation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Texas"], ["abbreviation", "TX"], ["created_at", "2017-06-02 00:06:21.164593"], ["updated_at", "2017-06-02 00:06:21.164593"]]
+  [1m[35m (15.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "states" ("name", "abbreviation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Utah"], ["abbreviation", "UT"], ["created_at", "2017-06-02 00:06:21.180219"], ["updated_at", "2017-06-02 00:06:21.180219"]]
+  [1m[35m (17.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "states" ("name", "abbreviation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Vermont"], ["abbreviation", "VT"], ["created_at", "2017-06-02 00:06:21.198840"], ["updated_at", "2017-06-02 00:06:21.198840"]]
+  [1m[35m (15.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "states" ("name", "abbreviation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Virginia"], ["abbreviation", "VA"], ["created_at", "2017-06-02 00:06:21.214465"], ["updated_at", "2017-06-02 00:06:21.214465"]]
+  [1m[35m (15.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "states" ("name", "abbreviation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Washington"], ["abbreviation", "WA"], ["created_at", "2017-06-02 00:06:21.230092"], ["updated_at", "2017-06-02 00:06:21.230092"]]
+  [1m[35m (15.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "states" ("name", "abbreviation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "West Virginia"], ["abbreviation", "WV"], ["created_at", "2017-06-02 00:06:21.245717"], ["updated_at", "2017-06-02 00:06:21.245717"]]
+  [1m[35m (15.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "states" ("name", "abbreviation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Wisconsin"], ["abbreviation", "WI"], ["created_at", "2017-06-02 00:06:21.261342"], ["updated_at", "2017-06-02 00:06:21.261342"]]
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "states" ("name", "abbreviation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Wyoming"], ["abbreviation", "WY"], ["created_at", "2017-06-02 00:06:21.292595"], ["updated_at", "2017-06-02 00:06:21.292595"]]
+  [1m[35m (15.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mState Load (15.6ms)[0m  [1m[34mSELECT "states".* FROM "states"[0m
