@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Apparatus</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Department</th>
+      <th>Code</th>
+      <th>Name</th>
+      <th>Current</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @apparatus.each do |apparatu| %>
+      <tr>
+        <td><%= apparatu.department %></td>
+        <td><%= apparatu.code %></td>
+        <td><%= apparatu.name %></td>
+        <td><%= apparatu.current %></td>
+        <td><%= link_to 'Show', apparatu %></td>
+        <td><%= link_to 'Edit', edit_apparatu_path(apparatu) %></td>
+        <td><%= link_to 'Destroy', apparatu, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Apparatu', new_apparatu_path %>

@@ -1,0 +1,37 @@
+<%= form_for(apparatu) do |f| %>
+  <% if apparatu.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(apparatu.errors.count, "error") %> prohibited this apparatu from being saved:</h2>
+
+      <ul>
+      <% apparatu.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :department_id %>
+    <%= f.text_field :department_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :code %>
+    <%= f.number_field :code %>
+  </div>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :current %>
+    <%= f.check_box :current %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

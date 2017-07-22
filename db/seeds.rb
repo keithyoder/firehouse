@@ -60,3 +60,13 @@ State.create([
   { :name => 'Wyoming', :abbreviation => 'WY'}
 ])
 
+BloodType.create([
+  {:type => 'A Negative'},
+  {:type => 'A Positive'},
+  {:type => 'AB Negative'},
+  {:type => 'AB Positive'},
+  {:type => 'B Negative'},
+  {:type => 'B Positive'},
+  {:type => 'O Negative'},
+  {:type => 'O Positive'}
+])

@@ -1,0 +1,106 @@
+<%= form_for [@member.department, @member] do |f| %>
+  <% if member.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(member.errors.count, "error") %> prohibited this member from being saved:</h2>
+
+      <ul>
+      <% member.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.hidden_field :department_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :address %>
+    <%= f.text_field :address %>
+  </div>
+
+  <div class="field">
+    <%= f.label :address2 %>
+    <%= f.text_field :address2 %>
+  </div>
+
+  <div class="field">
+    <%= f.label :city %>
+    <%= f.text_field :city %>
+  </div>
+
+  <div class="field">
+    <%= f.label :state_id %>
+    <%= f.select :state_id, options_from_collection_for_select(State.all, :id, :abbreviation) %>
+  </div>
+
+  <div class="field">
+    <%= f.label :zip %>
+    <%= f.text_field :zip %>
+  </div>
+
+  <div class="field">
+    <%= f.label :home_phone %>
+    <%= f.text_field :home_phone %>
+  </div>
+
+  <div class="field">
+    <%= f.label :cell_phone %>
+    <%= f.text_field :cell_phone %>
+  </div>
+
+  <div class="field">
+    <%= f.label :dept_cell_phone %>
+    <%= f.text_field :dept_cell_phone %>
+  </div>
+
+  <div class="field">
+    <%= f.label :social_security %>
+    <%= f.text_field :social_security %>
+  </div>
+
+  <div class="field">
+    <%= f.label :drivers_license %>
+    <%= f.text_field :drivers_license %>
+  </div>
+
+  <div class="field">
+    <%= f.label :birth_date %>
+    <%= f.date_select :birth_date %>
+  </div>
+
+  <div class="field">
+    <%= f.label :bloodtype_id %>
+    <%= f.select :bloodtype_id, options_from_collection_for_select(BloodType.all, :id, :type) %>
+  </div>
+
+  <div class="field">
+    <%= f.label :email %>
+    <%= f.text_field :email %>
+  </div>
+
+  <div class="field">
+    <%= f.label :alarm_roster %>
+    <%= f.check_box :alarm_roster %>
+  </div>
+
+  <div class="field">
+    <%= f.label :attendance_roster %>
+    <%= f.check_box :attendance_roster %>
+  </div>
+
+  <div class="field">
+    <%= f.label :tax_credit %>
+    <%= f.check_box :tax_credit %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

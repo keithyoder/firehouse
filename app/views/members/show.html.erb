@@ -1,0 +1,94 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Department:</strong>
+  <%= @member.department %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @member.name %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @member.address %>
+</p>
+
+<p>
+  <strong>Address2:</strong>
+  <%= @member.address2 %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @member.city %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @member.state %>
+</p>
+
+<p>
+  <strong>Zip:</strong>
+  <%= @member.zip %>
+</p>
+
+<p>
+  <strong>Home phone:</strong>
+  <%= @member.home_phone %>
+</p>
+
+<p>
+  <strong>Cell phone:</strong>
+  <%= @member.cell_phone %>
+</p>
+
+<p>
+  <strong>Dept cell phone:</strong>
+  <%= @member.dept_cell_phone %>
+</p>
+
+<p>
+  <strong>Social security:</strong>
+  <%= @member.social_security %>
+</p>
+
+<p>
+  <strong>Drivers license:</strong>
+  <%= @member.drivers_license %>
+</p>
+
+<p>
+  <strong>Birth date:</strong>
+  <%= @member.birth_date %>
+</p>
+
+<p>
+  <strong>Bloodtype:</strong>
+  <%= @member.bloodtype %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @member.email %>
+</p>
+
+<p>
+  <strong>Alarm roster:</strong>
+  <%= @member.alarm_roster %>
+</p>
+
+<p>
+  <strong>Attendance roster:</strong>
+  <%= @member.attendance_roster %>
+</p>
+
+<p>
+  <strong>Tax credit:</strong>
+  <%= @member.tax_credit %>
+</p>
+
+<%= link_to 'Edit', edit_department_member_path(:department, @member) %> |
+<%= link_to 'Back', department_members_path %>

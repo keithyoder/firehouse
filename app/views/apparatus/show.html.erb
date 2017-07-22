@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Department:</strong>
+  <%= @apparatu.department %>
+</p>
+
+<p>
+  <strong>Code:</strong>
+  <%= @apparatu.code %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @apparatu.name %>
+</p>
+
+<p>
+  <strong>Current:</strong>
+  <%= @apparatu.current %>
+</p>
+
+<%= link_to 'Edit', edit_apparatu_path(@apparatu) %> |
+<%= link_to 'Back', apparatus_path %>

@@ -1,0 +1,41 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  department: one
+  name: 
+  address: MyString
+  address2: MyString
+  city: MyString
+  state: one
+  zip: MyString
+  home_phone: MyString
+  cell_phone: MyString
+  dept_cell_phone: MyString
+  social_security: MyString
+  drivers_license: MyString
+  birth_date: 2017-06-14
+  bloodtype: one
+  email: MyString
+  alarm_roster: false
+  attendance_roster: false
+  tax_credit: false
+
+two:
+  department: two
+  name: 
+  address: MyString
+  address2: MyString
+  city: MyString
+  state: two
+  zip: MyString
+  home_phone: MyString
+  cell_phone: MyString
+  dept_cell_phone: MyString
+  social_security: MyString
+  drivers_license: MyString
+  birth_date: 2017-06-14
+  bloodtype: two
+  email: MyString
+  alarm_roster: false
+  attendance_roster: false
+  tax_credit: false

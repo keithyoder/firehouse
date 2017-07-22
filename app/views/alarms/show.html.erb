@@ -1,0 +1,42 @@
+<p>
+  <strong>Department:</strong>
+  <%= @alarm.department %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @alarm.date %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @alarm.location %>
+</p>
+
+<p>
+  <strong>Received:</strong>
+  <%= @alarm.received %>
+</p>
+
+<p>
+  <strong>10 8:</strong>
+  <%= @alarm.ten_8 %>
+</p>
+
+<p>
+  <strong>10 2:</strong>
+  <%= @alarm.ten_2 %>
+</p>
+
+<p>
+  <strong>10 7:</strong>
+  <%= @alarm.ten_7 %>
+</p>
+
+<p>
+  <strong>Miles:</strong>
+  <%= @alarm.miles %>
+</p>
+
+<%= link_to 'Edit', edit_alarm_path(@alarm) %> |
+<%= link_to 'Back', alarms_path %>

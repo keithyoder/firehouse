@@ -1,0 +1,61 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Members</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Department</th>
+      <th>Name</th>
+      <th>Address</th>
+      <th>Address2</th>
+      <th>City</th>
+      <th>State</th>
+      <th>Zip</th>
+      <th>Home phone</th>
+      <th>Cell phone</th>
+      <th>Dept cell phone</th>
+      <th>Social security</th>
+      <th>Drivers license</th>
+      <th>Birth date</th>
+      <th>Bloodtype</th>
+      <th>Email</th>
+      <th>Alarm roster</th>
+      <th>Attendance roster</th>
+      <th>Tax credit</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @members.each do |member| %>
+      <tr>
+        <td><%= member.department %></td>
+        <td><%= member.name %></td>
+        <td><%= member.address %></td>
+        <td><%= member.address2 %></td>
+        <td><%= member.city %></td>
+        <td><%= member.state %></td>
+        <td><%= member.zip %></td>
+        <td><%= member.home_phone %></td>
+        <td><%= member.cell_phone %></td>
+        <td><%= member.dept_cell_phone %></td>
+        <td><%= member.social_security %></td>
+        <td><%= member.drivers_license %></td>
+        <td><%= member.birth_date %></td>
+        <td><%= member.bloodtype %></td>
+        <td><%= member.email %></td>
+        <td><%= member.alarm_roster %></td>
+        <td><%= member.attendance_roster %></td>
+        <td><%= member.tax_credit %></td>
+        <td><%= link_to 'Show', member %></td>
+        <td><%= link_to 'Edit', edit_department_member_path(member.department, member) %></td>
+        <td><%= link_to 'Destroy', member, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Member', new_department_member_path(@department) %>

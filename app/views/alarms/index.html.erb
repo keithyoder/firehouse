@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Alarms</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Department</th>
+      <th>Date</th>
+      <th>Location</th>
+      <th>Received</th>
+      <th>10 8</th>
+      <th>10 2</th>
+      <th>10 7</th>
+      <th>Miles</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @alarms.each do |alarm| %>
+      <tr>
+        <td><%= alarm.department %></td>
+        <td><%= alarm.date %></td>
+        <td><%= alarm.location %></td>
+        <td><%= alarm.received %></td>
+        <td><%= alarm.ten_8 %></td>
+        <td><%= alarm.ten_2 %></td>
+        <td><%= alarm.ten_7 %></td>
+        <td><%= alarm.miles %></td>
+        <td><%= link_to 'Show', alarm %></td>
+        <td><%= link_to 'Edit', edit_alarm_path(alarm) %></td>
+        <td><%= link_to 'Destroy', alarm, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Alarm', new_alarm_path %>
